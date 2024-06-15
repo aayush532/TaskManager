@@ -21,7 +21,7 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <% if current_user %>
             <form class="ms-auto">
-              <%= button_to 'Logout', destroy_user_session_path, method: :delete, data: { confirm: 'Are you sure you want to log out?' }, class: 'btn btn-outline-light me-2' %>
+              <%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete }, class: 'btn btn-outline-light me-2' %>
             </form>
           <% else %>
             <form class="ms-auto">
